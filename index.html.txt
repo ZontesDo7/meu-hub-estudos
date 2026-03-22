@@ -52,5 +52,10 @@
         </main>
     </div>
     <script src="script.js"></script>
+<section class="notes-area">
+    <h3>Bloco de Notas do Dev</h3>
+    <textarea id="campo-notas" placeholder="Cole aqui seus códigos ou lembretes..."></textarea>
+    <p id="status-salvamento">Salvo automaticamente!</p>
+</section>
 </body>
 </html>
