@@ -1,0 +1,20 @@
+// Exibe a data de hoje
+document.getElementById('data-atual').innerText = new Date().toLocaleDateString();
+
+// Função para contar quantas aulas foram marcadas
+function atualizarProgresso() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    let concluidas = 0;
+
+    checkboxes.forEach(item => {
+        if (item.checked) {
+            concluidas++;
+        }
+    });
+
+    document.getElementById('concluidas-count').innerText = concluidas;
+}
+
+function mostrarSecao(nome) {
+    alert("Você clicou em: " + nome + ". Em breve você aprenderá a criar rotas para mudar de página!");
+}

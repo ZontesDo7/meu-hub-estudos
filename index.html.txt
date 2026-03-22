@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Hub de Dev</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <h2>DevProgresso</h2>
+            <nav>
+                <button onclick="mostrarSecao('home')">🏠 Home</button>
+                <button onclick="mostrarSecao('cronograma')">📅 Cronograma</button>
+                <button onclick="mostrarSecao('notas')">📝 Anotações</button>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <header>
+                <h1>Bem-vindo, Futuro Dev!</h1>
+                <p id="data-atual"></p>
+            </header>
+
+            <section class="stats">
+                <div class="stat-card">
+                    <h3>Aulas Concluídas</h3>
+                    <p id="concluidas-count">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Horas de Foco</h3>
+                    <p>12h</p>
+                </div>
+            </section>
+
+            <section class="study-list">
+                <h3>Minha Trilha de Estudos</h3>
+                <div class="task">
+                    <input type="checkbox" id="aula1" onchange="atualizarProgresso()">
+                    <label for="aula1">Dia 1: Estrutura HTML (Tags e Documento)</label>
+                </div>
+                <div class="task">
+                    <input type="checkbox" id="aula2" onchange="atualizarProgresso()">
+                    <label for="aula2">Dia 2: Links e Imagens</label>
+                </div>
+                <div class="task">
+                    <input type="checkbox" id="aula3" onchange="atualizarProgresso()">
+                    <label for="aula3">Dia 3: CSS Básico (Cores e Fontes)</label>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
