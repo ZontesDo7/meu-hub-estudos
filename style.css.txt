@@ -78,3 +78,24 @@ input[type="checkbox"] {
     accent-color: var(--accent);
     transform: scale(1.2);
 }
+const campoNotas = document.getElementById('campo-notas');
+const statusSalvo = document.getElementById('status-salvamento');
+
+// 1. Carregar nota salva ao abrir o site
+window.addEventListener('load', () => {
+    const notaSalva = localStorage.getItem('minhasNotas');
+    if (notaSalva) {
+        campoNotas.value = notaSalva;
+    }
+});
+
+// 2. Salvar enquanto digita
+campoNotas.addEventListener('input', () => {
+    localStorage.setItem('minhasNotas', campoNotas.value);
+    
+    // Mostrar aviso rápido de "salvando"
+    statusSalvo.style.display = 'block';
+    setTimeout(() => {
+        statusSalvo.style.display = 'none';
+    }, 1000);
+});
