@@ -1,87 +1,74 @@
-/* Configurações de Cores Únicas */
 :root {
-    --bg-body: #0a0b10;
-    --glass-bg: rgba(255, 255, 255, 0.03);
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --neon-green: #00ff88;
-    --neon-blue: #00d9ff;
-    --neon-purple: #bc13fe;
-    --text-main: #e0e0e0;
+    --bg: #050505;
+    --card: rgba(255, 255, 255, 0.03);
+    --border: rgba(255, 255, 255, 0.1);
+    --neon: #00ff88;
+    --text: #ffffff;
 }
 
 body {
-    background: radial-gradient(circle at top right, #161b22, #0a0b10);
-    color: var(--text-main);
-    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
     margin: 0;
-    line-height: 1.6;
+    padding: 20px;
 }
 
-/* Sidebar Futurista */
-.sidebar {
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(15px);
-    border-right: 1px solid var(--glass-border);
+.content { max-width: 1200px; margin: 0 auto; }
+
+header { text-align: center; margin-bottom: 50px; }
+
+h1 { font-size: 3rem; background: linear-gradient(45deg, #00ff88, #00d9ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+.grid-aulas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 60px;
 }
 
-/* Títulos com Gradiente */
-h1, h2 {
-    background: linear-gradient(to right, var(--neon-green), var(--neon-blue));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 800;
-    letter-spacing: -1px;
-}
-
-/* O Efeito de Vidro nos Cards */
 .card-aula {
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--glass-border);
-    border-radius: 20px;
+    background: var(--card);
+    border: 1px solid var(--border);
     padding: 25px;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    position: relative;
-    overflow: hidden;
-}
-
-.card-aula::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.05), transparent);
-    transform: translateX(-100%);
-    transition: 0.6s;
-}
-
-.card-aula:hover::before {
-    transform: translateX(100%);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    transition: 0.4s;
+    animation: slideUp 0.5s ease forwards;
 }
 
 .card-aula:hover {
-    transform: scale(1.05);
-    border-color: var(--neon-blue);
-    box-shadow: 0 10px 30px rgba(0, 217, 255, 0.2);
+    border-color: var(--neon);
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.2);
 }
 
-/* Badges Coloridas */
-.badge.iniciante { border: 1px solid var(--neon-green); color: var(--neon-green); shadow: 0 0 10px var(--neon-green); }
-.badge.intermediario { border: 1px solid var(--neon-blue); color: var(--neon-blue); }
-.badge.avancado { border: 1px solid var(--neon-purple); color: var(--neon-purple); }
+.aula-icon { font-size: 2.5rem; margin-bottom: 15px; }
 
-/* Botões Neon */
 .card-aula a {
-    background: transparent;
-    border: 1px solid var(--neon-green);
-    color: var(--neon-green);
-    text-transform: uppercase;
-    font-size: 12px;
-    letter-spacing: 2px;
-    transition: 0.3s;
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: var(--neon);
+    border: 1px solid var(--neon);
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
 }
 
-.card-aula a:hover {
-    background: var(--neon-green);
-    color: #000;
-    box-shadow: 0 0 20px var(--neon-green);
+.card-aula a:hover { background: var(--neon); color: #000; }
+
+.badge {
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 30px;
+    background: var(--card);
+    margin-bottom: 30px;
+    border-left: 5px solid var(--neon);
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
