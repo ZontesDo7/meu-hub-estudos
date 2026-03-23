@@ -3,60 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Hub de Dev</title>
+    <title>Master Hub Dev</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="dashboard">
-        <aside class="sidebar">
-            <h2>DevProgresso</h2>
-            <nav>
-                <button onclick="mostrarSecao('home')">🏠 Home</button>
-                <button onclick="mostrarSecao('cronograma')">📅 Cronograma</button>
-                <button onclick="mostrarSecao('notas')">📝 Anotações</button>
-            </nav>
-        </aside>
-
         <main class="content">
             <header>
-                <h1>Bem-vindo, Futuro Dev!</h1>
-                <p id="data-atual"></p>
+                <h1>MEU HUB DE ESTUDOS 100+</h1>
+                <p>O caminho para o Full Stack Starts Here.</p>
             </header>
 
-            <section class="stats">
-                <div class="stat-card">
-                    <h3>Aulas Concluídas</h3>
-                    <p id="concluidas-count">0</p>
-                </div>
-                <div class="stat-card">
-                    <h3>Horas de Foco</h3>
-                    <p>12h</p>
-                </div>
+            <section class="nivel-secao">
+                <h2 class="badge iniciante">Iniciante</h2>
+                <div id="grid-iniciante" class="grid-aulas"></div>
             </section>
 
-            <section class="study-list">
-                <h3>Minha Trilha de Estudos</h3>
-                <div class="task">
-                    <input type="checkbox" id="aula1" onchange="atualizarProgresso()">
-                    <label for="aula1">Dia 1: Estrutura HTML (Tags e Documento)</label>
-                </div>
-                <div class="task">
-                    <input type="checkbox" id="aula2" onchange="atualizarProgresso()">
-                    <label for="aula2">Dia 2: Links e Imagens</label>
-                </div>
-                <div class="task">
-                    <input type="checkbox" id="aula3" onchange="atualizarProgresso()">
-                    <label for="aula3">Dia 3: CSS Básico (Cores e Fontes)</label>
-                </div>
+            <section class="nivel-secao">
+                <h2 class="badge intermediario">Intermediário</h2>
+                <div id="grid-intermediario" class="grid-aulas"></div>
+            </section>
+
+            <section class="nivel-secao">
+                <h2 class="badge avancado">Avançado</h2>
+                <div id="grid-avancado" class="grid-aulas"></div>
             </section>
         </main>
     </div>
     <script src="script.js"></script>
-<section class="notes-area">
-    <h3>Bloco de Notas do Dev</h3>
-    <textarea id="campo-notas" placeholder="Cole aqui seus códigos ou lembretes..."></textarea>
-    <p id="status-salvamento">Salvo automaticamente!</p>
-</section>
 </body>
 </html>
