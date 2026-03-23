@@ -1,83 +1,61 @@
 const aulas = [
-    // --- NÍVEL 1: INICIANTE (HTML & FUNDAMENTOS) ---
-    { nivel: 'iniciante', titulo: '01. Como a Web funciona', desc: 'Protocolos, Servidores e Browsers.', link: 'https://youtu.be/rsAAreVig2k', logo: '🌐' },
-    { nivel: 'iniciante', titulo: '02. Instalando o VS Code', desc: 'Configurando seu ambiente de trabalho.', link: 'https://youtu.be/S9uPNppzSRA', logo: '💻' },
-    { nivel: 'iniciante', titulo: '03. Estrutura do HTML', desc: 'A anatomia de um documento web.', link: 'https://youtu.be/iT6E92Kt38o', logo: '🏗️' },
-    { nivel: 'iniciante', titulo: '04. Cabeçalhos e Parágrafos', desc: 'Hierarquia de textos (h1-h6).', link: 'https://youtu.be/VfIVD_Xat0w', logo: '✍️' },
-    { nivel: 'iniciante', titulo: '05. Formatação de Texto', desc: 'Negrito, itálico e outras tags.', link: 'https://youtu.be/p6f6_nS7N3M', logo: '🔡' },
-    { nivel: 'iniciante', titulo: '06. Listas Ordenadas', desc: 'Tags UL, OL e LI.', link: 'https://youtu.be/E6769f3I69A', logo: '🔢' },
-    { nivel: 'iniciante', titulo: '07. Trabalhando com Links', desc: 'Navegação interna e externa.', link: 'https://youtu.be/U97vO7-OOn4', logo: '🔗' },
-    { nivel: 'iniciante', titulo: '08. Imagens e Alt Text', desc: 'Otimização e acessibilidade.', link: 'https://youtu.be/8mG_7X1vYAs', logo: '🖼️' },
-    { nivel: 'iniciante', titulo: '09. Tabelas no HTML', desc: 'Organizando dados complexos.', link: 'https://youtu.be/mHeNsh7-m88', logo: '📊' },
-    { nivel: 'iniciante', titulo: '10. Formulários: Parte 1', desc: 'Inputs de texto e botões.', link: 'https://youtu.be/F74SAsv2O_M', logo: '📝' },
-    { nivel: 'iniciante', titulo: '11. Formulários: Parte 2', desc: 'Select, Checkbox e Radio.', link: 'https://youtu.be/L8K_7m1pBvM', logo: '🔘' },
-    { nivel: 'iniciante', titulo: '12. Tags Semânticas', desc: 'Melhorando o SEO do seu site.', link: 'https://youtu.be/NH_m076Fp9Y', logo: '🔍' },
-    { nivel: 'iniciante', titulo: '13. Audio e Vídeo', desc: 'Mídia nativa no navegador.', link: 'https://youtu.be/E-r6S7P9H_I', logo: '🎥' },
-    { nivel: 'iniciante', titulo: '14. O que é CSS?', desc: 'A folha de estilo em cascata.', link: 'https://youtu.be/5PSWeS7u97Y', logo: '🎨' },
-    { nivel: 'iniciante', titulo: '15. Seletores CSS', desc: 'ID, Class e Elementos.', link: 'https://youtu.be/f9pG0EonA_Y', logo: '🎯' },
+    // --- NÍVEL 1: INICIANTE (HTML5) ---
+    { nivel: 'iniciante', titulo: '01. O que é HTML5?', desc: 'A base da internet.', link: 'https://www.youtube.com/watch?v=epDCjksKMok', logo: '🌐' },
+    { nivel: 'iniciante', titulo: '02. Instalando o VS Code', desc: 'Configurando seu editor.', link: 'https://www.youtube.com/watch?v=S9uPNppzSRA', logo: '💻' },
+    { nivel: 'iniciante', titulo: '03. Primeiros Passos', desc: 'Sua primeira página.', link: 'https://www.youtube.com/watch?v=iT6E92Kt38o', logo: '🏗️' },
+    { nivel: 'iniciante', titulo: '04. Parágrafos e Títulos', desc: 'Hierarquia h1 a h6.', link: 'https://www.youtube.com/watch?v=VfIVD_Xat0w', logo: '✍️' },
+    { nivel: 'iniciante', titulo: '05. Desafio das Mensagens', desc: 'Praticando o que aprendeu.', link: 'https://www.youtube.com/watch?v=p6f6_nS7N3M', logo: '🏆' },
+    { nivel: 'iniciante', titulo: '06. Imagens no HTML', desc: 'Formatos e carregamento.', link: 'https://www.youtube.com/watch?v=8mG_7X1vYAs', logo: '🖼️' },
+    { nivel: 'iniciante', titulo: '07. Favicons', desc: 'O ícone da aba do navegador.', link: 'https://www.youtube.com/watch?v=689N_0O_m6Y', logo: '🔖' },
+    { nivel: 'iniciante', titulo: '08. Listas Ol e Ul', desc: 'Organizando itens.', link: 'https://www.youtube.com/watch?v=E6769f3I69A', logo: '🔢' },
+    { nivel: 'iniciante', titulo: '09. Links Externos', desc: 'Navegando para outros sites.', link: 'https://www.youtube.com/watch?v=U97vO7-OOn4', logo: '🔗' },
+    { nivel: 'iniciante', titulo: '10. Links Internos', desc: 'Navegação entre suas páginas.', link: 'https://www.youtube.com/watch?v=I_AnT8p54O0', logo: '📂' },
 
-    // --- NÍVEL 2: INTERMEDIÁRIO (CSS AVANÇADO & DESIGN) ---
-    { nivel: 'intermediario', titulo: '16. Cores no CSS', desc: 'HEX, RGB e HSL.', link: 'https://youtu.be/vV9X_p7f6_0', logo: '🌈' },
-    { nivel: 'intermediario', titulo: '17. O Box Model', desc: 'Margin, Padding e Border.', link: 'https://youtu.be/vV9X_p7f6_0', logo: '📦' },
-    { nivel: 'intermediario', titulo: '18. Unidades de Medida', desc: 'PX, EM, REM e %.', link: 'https://youtu.be/vV9X_p7f6_0', logo: '📏' },
-    { nivel: 'intermediario', titulo: '19. Background Avançado', desc: 'Imagens e gradientes de fundo.', link: 'https://youtu.be/vV9X_p7f6_0', logo: '🖼️' },
-    { nivel: 'intermediario', titulo: '20. Posicionamento', desc: 'Relative, Absolute e Fixed.', link: 'https://youtu.be/vV9X_p7f6_0', logo: '📍' },
-    { nivel: 'intermediario', titulo: '21. Flexbox Container', desc: 'Direção e alinhamento.', link: 'https://youtu.be/5PSWeS7u97Y', logo: '📐' },
-    { nivel: 'intermediario', titulo: '22. Flexbox Items', desc: 'Grow, Shrink e Basis.', link: 'https://youtu.be/5PSWeS7u97Y', logo: '🔧' },
-    { nivel: 'intermediario', titulo: '23. CSS Grid Basics', desc: 'Linhas e Colunas.', link: 'https://youtu.be/vV9X_p7f6_0', logo: '🏁' },
-    { nivel: 'intermediario', titulo: '24. Grid Areas', desc: 'Layouts complexos rápidos.', link: 'https://youtu.be/vV9X_p7f6_0', logo: '🧩' },
-    { nivel: 'intermediario', titulo: '25. Responsividade', desc: 'Media Queries e Mobile First.', link: 'https://youtu.be/vV9X_p7f6_0', logo: '📱' },
-    { nivel: 'intermediario', titulo: '26. Pseudo-classes', desc: 'Hover, Active e Focus.', link: 'https://youtu.be/vV9X_p7f6_0', logo: '✨' },
-    { nivel: 'intermediario', titulo: '27. Transições CSS', desc: 'Suavizando mudanças de estado.', link: 'https://youtu.be/vV9X_p7f6_0', logo: '📽️' },
-    { nivel: 'intermediario', titulo: '28. Animações e Keyframes', desc: 'Criando movimento no site.', link: 'https://youtu.be/vV9X_p7f6_0', logo: '🚀' },
-    { nivel: 'intermediario', titulo: '29. Variáveis CSS', desc: 'O poder do Root.', link: 'https://youtu.be/vV9X_p7f6_0', logo: '💎' },
-    { nivel: 'intermediario', titulo: '30. GitHub para Devs', desc: 'Versionamento de código.', link: 'https://youtu.be/vV9X_p7f6_0', logo: '🐙' },
-
-    // --- NÍVEL 3: AVANÇADO (JAVASCRIPT & LÓGICA) ---
-    { nivel: 'avancado', titulo: '31. Intro ao JavaScript', desc: 'A linguagem da interatividade.', link: 'https://youtu.be/vV9X_p7f6_0', logo: '🧠' },
-    { nivel: 'avancado', titulo: '32. Variáveis (Let/Const)', desc: 'Armazenando dados.', link: 'https://youtu.be/vV9X_p7f6_0', logo: '💾' },
-    { nivel: 'avancado', titulo: '33. Tipos de Dados', desc: 'Strings, Numbers e Booleans.', link: 'https://youtu.be/vV9X_p7f6_0', logo: '🔢' },
-    { nivel: 'avancado', titulo: '34. Operadores Matemáticos', desc: 'Cálculos no navegador.', link: 'https://youtu.be/vV9X_p7f6_0', logo: '➕' },
-    { nivel: 'avancado', titulo: '35. Condicionais IF/ELSE', desc: 'Lógica de decisão.', link: 'https://youtu.be/vV9X_p7f6_0', logo: '🚦' },
-    { nivel: 'avancado', titulo: '36. Switch Case', desc: 'Múltiplas escolhas.', link: 'https://youtu.be/vV9X_p7f6_0', logo: '🎛️' },
-    { nivel: 'avancado', titulo: '37. Funções Básicas', desc: 'Reutilizando blocos de código.', link: 'https://youtu.be/vV9X_p7f6_0', logo: '⚙️' },
-    { nivel: 'avancado', titulo: '38. Arrow Functions', desc: 'O jeito moderno de escrever funções.', link: 'https://youtu.be/vV9X_p7f6_0', logo: '🏹' },
-    { nivel: 'avancado', titulo: '39. Manipulando o DOM', desc: 'Alterando HTML com JS.', link: 'https://youtu.be/vV9X_p7f6_0', logo: '🖱️' },
-    { nivel: 'avancado', titulo: '40. Eventos de Clique', desc: 'Reagindo à interação do usuário.', link: 'https://youtu.be/vV9X_p7f6_0', logo: '🔘' },
-    { nivel: 'avancado', titulo: '41. Arrays (Listas)', desc: 'Organizando coleções.', link: 'https://youtu.be/vV9X_p7f6_0', logo: '📜' },
-    { nivel: 'avancado', titulo: '42. Loops (For/While)', desc: 'Repetindo tarefas.', link: 'https://youtu.be/vV9X_p7f6_0', logo: '🔄' },
-    { nivel: 'avancado', titulo: '43. Objetos no JS', desc: 'Modelando o mundo real.', link: 'https://youtu.be/vV9X_p7f6_0', logo: '💎' },
-    { nivel: 'avancado', titulo: '44. LocalStorage', desc: 'Salvando dados no navegador.', link: 'https://youtu.be/vV9X_p7f6_0', logo: '🗄️' },
-    { nivel: 'avancado', titulo: '45. Consumo de API/Fetch', desc: 'Buscando dados externos.', link: 'https://youtu.be/vV9X_p7f6_0', logo: '🔌' },
-    // Para chegar a 100, adicionei placeholders abaixo que você pode renomear conforme avançar:
+    // --- NÍVEL 2: INTERMEDIÁRIO (CSS3) ---
+    { nivel: 'intermediario', titulo: '11. Introdução ao CSS', desc: 'Estilos inline, internos e externos.', link: 'https://www.youtube.com/watch?v=5PSWeS7u97Y', logo: '🎨' },
+    { nivel: 'intermediario', titulo: '12. Cores e Representações', desc: 'RGB, Hex e HSL.', link: 'https://www.youtube.com/watch?v=vV9X_p7f6_0', logo: '🌈' },
+    { nivel: 'intermediario', titulo: '13. Degradês no CSS', desc: 'Fundo com gradientes.', link: 'https://www.youtube.com/watch?v=f9pG0EonA_Y', logo: '🎭' },
+    { nivel: 'intermediario', titulo: '14. Primeiro Projeto CSS', desc: 'Criando um site real.', link: 'https://www.youtube.com/watch?v=gTIn6_U-Pps', logo: '🚀' },
+    { nivel: 'intermediario', titulo: '15. Fontes no Google Fonts', desc: 'Tipografia profissional.', link: 'https://www.youtube.com/watch?v=v_uNAsOof_s', logo: '🔤' },
+    { nivel: 'intermediario', titulo: '16. Alinhamento de Textos', desc: 'Text-align e espaçamentos.', link: 'https://www.youtube.com/watch?v=E_I_I9mS6uI', logo: '📏' },
+    { nivel: 'intermediario', titulo: '17. O Modelo de Caixas', desc: 'Padding, Border e Margin.', link: 'https://www.youtube.com/watch?v=E_I_I9mS6uI', logo: '📦' },
+    
+    // --- NÍVEL 3: AVANÇADO (JAVASCRIPT) ---
+    { nivel: 'avancado', titulo: '18. Intro ao JavaScript', desc: 'Lógica e interatividade.', link: 'https://www.youtube.com/watch?v=BXqUH86F-kA', logo: '🧠' },
+    { nivel: 'avancado', titulo: '19. Variáveis e Dados', desc: 'Onde o JS guarda info.', link: 'https://www.youtube.com/watch?v=VbHCmN_6i_A', logo: '💾' },
+    { nivel: 'avancado', titulo: '20. Funções no JS', desc: 'Criando ações dinâmicas.', link: 'https://www.youtube.com/watch?v=mEbeS8vT5Kk', logo: '⚙️' }
 ];
 
-// Preenchendo até 100 dinamicamente para o seu site não ficar vazio
-for(let i = 46; i <= 100; i++) {
-    let nv = i <= 60 ? 'intermediario' : 'avancado';
+// Gerador automático das outras 80 aulas para completar as 100
+for(let i = 21; i <= 100; i++) {
+    let nv = i <= 40 ? 'iniciante' : (i <= 80 ? 'intermediario' : 'avancado');
     aulas.push({
         nivel: nv,
-        titulo: `${i}. Conteúdo Extra ${i}`,
-        desc: 'Espaço reservado para novas aulas e desafios.',
-        link: 'https://github.com',
+        titulo: `Aula ${i}: Em breve`,
+        desc: `Continue sua jornada para completar as 100 aulas!`,
+        link: 'https://www.youtube.com/results?search_query=curso+programacao',
         logo: '🚀'
     });
 }
 
 function renderizarAulas() {
     const grids = ['iniciante', 'intermediario', 'avancado'];
-    grids.forEach(g => document.getElementById(`grid-${g}`).innerHTML = '');
+    grids.forEach(g => {
+        const el = document.getElementById(`grid-${g}`);
+        if(el) el.innerHTML = '';
+    });
 
     aulas.forEach((aula, index) => {
         const card = `
-            <div class="card-aula" style="animation-delay: ${index * 0.05}s">
+            <div class="card-aula" style="animation-delay: ${index * 0.03}s">
                 <div class="aula-icon">${aula.logo}</div>
                 <h3>${aula.titulo}</h3>
                 <p>${aula.desc}</p>
-                <a href="${aula.link}" target="_blank">Abrir Aula</a>
+                <a href="${aula.link}" target="_blank">Assistir Agora</a>
             </div>
         `;
-        document.getElementById(`grid-${aula.nivel}`).innerHTML += card;
+        const container = document.getElementById(`grid-${aula.nivel}`);
+        if(container) container.innerHTML += card;
     });
 }
 
